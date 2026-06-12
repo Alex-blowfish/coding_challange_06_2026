@@ -1,0 +1,47 @@
+### GET list of (available) products
+GET http://localhost:8000/api/v1/products
+Accept: application/json
+###
+
+
+
+### GET detailed view of a specific product
+GET http://localhost:8000/api/v1/products/2
+Accept: application/json
+###
+
+
+
+### GET cart aka list of products in cart
+GET http://localhost:8000/api/v1/carts/1
+Accept: application/jsons
+###
+
+
+
+### NEW
+POST http://localhost:8000/api/v1/carts/1/items
+Content-Type: application/json
+Accept: application/json
+
+{
+    "product_id": 4
+}
+###
+
+
+### remove product from cart completley which means all added products of this will be removed
+DELETE http://localhost:8000/api/v1/carts/1/items/2
+Accept: application/json
+###
+
+
+
+### NEW
+PATCH http://localhost:8000/api/v1/carts/1/items/3
+Accept: application/json
+
+{
+  "quantity": 22
+}
+###
